@@ -1,17 +1,26 @@
-# Abisoniya Institute Login
+# Abisoniya Institute
 
-A beginner-friendly login page built with React and an Express server. It uses
-one demo account and does not use a database or production authentication.
+A beginner-friendly React login page and Express API for the Abisoniya Institute
+full-stack development course. The login uses one mock account, not a database
+or production authentication.
 
 ## Run locally
 
-1. Install dependencies with `npm install`.
-2. Start the Vite frontend and Express API with `npm run dev`.
-3. Open the local URL printed by Vite (usually `http://localhost:5173`).
+1. Install the project dependencies with `npm install`.
+2. Start the frontend and backend with `npm run dev`.
+3. Open the Vite URL printed in the terminal (usually `http://localhost:5173`).
 
-The Vite development server proxies `/api` requests to the Express server in
-`backend/index.js` on port 4000. To create a production frontend bundle, run
-`npm run build`. Start the API separately with `npm start`.
+The React app is in `frontend/`. The API is in `backend/` and runs on port 4000.
+Vite forwards `/api` requests to the API. Run `npm run build` to build the
+frontend or `npm start` to run only the API. Run `npm run lint` to check the
+frontend code.
+
+## Deploy to Vercel
+
+Import the repository into Vercel and keep the project root set to the
+repository root. `vercel.json` installs the frontend dependencies, builds the
+React app into `frontend/dist`, and serves `api/login.js` as the `/api/login`
+serverless function. The same login check is shared with the local Express API.
 
 ## Demo account
 
